@@ -1,0 +1,28 @@
+/* Larger view styles */
+@media (min-width: 640px) {
+  #menu {
+    display: none;
+  }
+
+  header {
+    padding: 0.8rem 1.5rem;
+  }
+
+  nav,
+  nav.open {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    gap: 0.3rem;
+  }
+
+  nav a {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .album {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem 0.8rem;
+  }
+}
