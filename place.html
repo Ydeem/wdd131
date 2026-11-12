@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghana | David Wilson | WDD 131</title>
+  <meta name="description" content="Country page about Ghana with key facts, current weather, and wind chill, built by David Wilson for WDD 131 Dynamic Web Fundamentals.">
+  <meta name="author" content="David Wilson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Ghana</h1>
+  </header>
+
+  <main>
+    <picture class="hero">
+      <source media="(max-width: 699px)" srcset="images/ghana-hero-small.webp">
+      <source media="(min-width: 700px)" srcset="images/ghana-hero-large.webp">
+      <img src="images/ghana-hero-large.webp" alt="The Accra Ghana Temple under a cloudy sky in Accra, Ghana" width="1024" height="512">
+    </picture>
+
+    <section class="data">
+      <h2>Data</h2>
+      <dl>
+        <dt>Area:</dt><dd>238,535 sq km</dd>
+        <dt>Population:</dt><dd>34,427,414</dd>
+        <dt>Capital:</dt><dd>Accra</dd>
+        <dt>Languages:</dt><dd>English, Akan, Ewe, Ga</dd>
+        <dt>Currency:</dt><dd>Ghana Cedi (GH₵)</dd>
+        <dt>Time Zone:</dt><dd>GMT (UTC+0)</dd>
+        <dt>Calling Code:</dt><dd>+233</dd>
+        <dt>Internet TLD:</dt><dd>.gh</dd>
+      </dl>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <img class="weather-icon" src="images/weather.svg" alt="Partly cloudy weather icon" width="64" height="64">
+      <dl>
+        <dt>Temperature:</dt><dd><span id="temperature">30</span> °C</dd>
+        <dt>Conditions:</dt><dd>Partly Cloudy</dd>
+        <dt>Wind:</dt><dd><span id="windspeed">12</span> km/h</dd>
+        <dt>Wind Chill:</dt><dd id="windchill">N/A</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌺 David Wilson 🌺 Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
