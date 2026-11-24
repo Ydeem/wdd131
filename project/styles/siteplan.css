@@ -1,0 +1,146 @@
+:root {
+  --navy: #1b2a41;
+  --ivory: #faf7f0;
+  --gold: #c9a227;
+  --charcoal: #222222;
+  --heading-font: "Playfair Display", Georgia, serif;
+  --body-font: "Nunito", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--charcoal);
+  background-color: var(--ivory);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--navy);
+  color: var(--ivory);
+  border-bottom: 5px solid var(--gold);
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background-color: #fff;
+  border-left: 6px solid var(--gold);
+  border-radius: 4px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.swatch p {
+  margin: 0;
+}
+
+.chip {
+  flex: 0 0 60px;
+  height: 60px;
+  border: 1px solid var(--charcoal);
+  border-radius: 6px;
+}
+
+.navy { background-color: var(--navy); }
+.ivory { background-color: var(--ivory); }
+.gold { background-color: var(--gold); }
+.charcoal { background-color: var(--charcoal); }
+
+.font-sample {
+  font-size: 1.2rem;
+}
+
+.heading-font {
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.body-font {
+  font-family: var(--body-font);
+}
+
+.wireframes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+figure:first-child img {
+  max-width: 300px;
+}
+
+figcaption {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+footer {
+  background-color: var(--navy);
+  color: var(--ivory);
+  text-align: center;
+  padding: 1rem;
+  border-top: 5px solid var(--gold);
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .wireframes {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}

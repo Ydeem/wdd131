@@ -1,0 +1,244 @@
+:root {
+  --primary: #1e4d78;
+  --primary-dark: #133452;
+  --panel: #e9eef3;
+  --text: #1f1f1f;
+  --required: #b3261e;
+  --optional: #44546a;
+  --font: "Lato", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background-color: #fff;
+}
+
+header {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 560px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+form,
+.confirmation {
+  background-color: var(--panel);
+  border-radius: 6px;
+  padding: 1rem 1.2rem 1.4rem;
+}
+
+.note {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.req {
+  color: var(--required);
+  font-weight: 700;
+}
+
+.optional {
+  color: var(--optional);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.field-title {
+  display: block;
+  font-weight: 700;
+  margin: 1.1rem 0 0.35rem;
+  padding: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  border: 1px solid #8a99a8;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Visual clue for required fields */
+select:required,
+input[type="date"]:required {
+  border-left: 5px solid var(--required);
+}
+
+select:valid,
+input[type="date"]:valid {
+  border-left-color: #1f7a3a;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 1px;
+}
+
+fieldset {
+  border: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+
+legend.field-title {
+  margin-top: 0;
+}
+
+/* Star rating */
+.stars {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.3rem;
+  border-left: 5px solid var(--required);
+  padding: 0.3rem 0 0.3rem 0.5rem;
+}
+
+.stars label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.star-glyph {
+  font-size: 0.95rem;
+  color: #6b4e00;
+  letter-spacing: -1px;
+}
+
+.stars input {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.stars:has(input:checked) {
+  border-left-color: #1f7a3a;
+}
+
+.features label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.features input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 0.8rem;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--primary-dark);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Confirmation page */
+.confirmation {
+  text-align: center;
+}
+
+.confirmation h2 {
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+.count {
+  font-size: 1.2rem;
+}
+
+#review-count {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.confirmation a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+footer {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+#lastModified {
+  color: #ffff66;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 640px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    margin: 2rem auto;
+  }
+
+  form,
+  .confirmation {
+    padding: 1.5rem 2rem 2rem;
+  }
+}

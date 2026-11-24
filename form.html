@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form | David Wilson | WDD 131</title>
+  <meta name="description" content="Product review form for WDD 131 Dynamic Web Fundamentals by David Wilson. Rate a product, choose useful features, and write a review.">
+  <meta name="author" content="David Wilson">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+      <p class="note"><span class="req" aria-hidden="true">*</span> Required field</p>
+
+      <label for="product-name" class="field-title">Product Name <span class="req" aria-hidden="true">*</span></label>
+      <select id="product-name" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <fieldset class="rating">
+        <legend class="field-title">Overall Rating <span class="req" aria-hidden="true">*</span></legend>
+        <div class="stars">
+          <label for="rating-1"><span class="star-glyph" aria-hidden="true">&star;</span><span class="sr-only">1 star</span>
+            <input type="radio" id="rating-1" name="rating" value="1" required>
+          </label>
+          <label for="rating-2"><span class="star-glyph" aria-hidden="true">&star;&star;</span><span class="sr-only">2 stars</span>
+            <input type="radio" id="rating-2" name="rating" value="2" required>
+          </label>
+          <label for="rating-3"><span class="star-glyph" aria-hidden="true">&star;&star;&star;</span><span class="sr-only">3 stars</span>
+            <input type="radio" id="rating-3" name="rating" value="3" required>
+          </label>
+          <label for="rating-4"><span class="star-glyph" aria-hidden="true">&star;&star;&star;&star;</span><span class="sr-only">4 stars</span>
+            <input type="radio" id="rating-4" name="rating" value="4" required>
+          </label>
+          <label for="rating-5"><span class="star-glyph" aria-hidden="true">&star;&star;&star;&star;&star;</span><span class="sr-only">5 stars</span>
+            <input type="radio" id="rating-5" name="rating" value="5" required>
+          </label>
+        </div>
+      </fieldset>
+
+      <label for="install-date" class="field-title">Date of Installation <span class="req" aria-hidden="true">*</span></label>
+      <input type="date" id="install-date" name="installDate" required>
+
+      <fieldset class="features">
+        <legend class="field-title">Which features did you find useful? <em>(Check all that apply)</em></legend>
+        <label for="durability"><input type="checkbox" id="durability" name="features" value="durability"> Durability</label>
+        <label for="ease-of-use"><input type="checkbox" id="ease-of-use" name="features" value="ease of use"> Ease of Use</label>
+        <label for="performance"><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
+        <label for="design"><input type="checkbox" id="design" name="features" value="design"> Design</label>
+      </fieldset>
+
+      <label for="review" class="field-title">Written Review <span class="optional">(Optional)</span></label>
+      <textarea id="review" name="review" rows="5"></textarea>
+
+      <label for="user-name" class="field-title">Your Name <span class="optional">(Optional)</span></label>
+      <input type="text" id="user-name" name="userName" autocomplete="name">
+
+      <input type="submit" value="Post Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌺 David Wilson 🌺 Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
